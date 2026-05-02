@@ -1211,6 +1211,7 @@ class PlayerClass {
         this._showHitboxes = value;
     }
     playEndAnimation(endX, onComplete, portalY) {
+        window.parent.postMessage('end', '*');
         this._endAnimating = true;
         const scene = this._scene,
             landingY = portalY || 240,
